@@ -1,0 +1,35 @@
+
+/* Class = "UILabel"; text = "Furry Mode"; ObjectID = "2Ww-dV-8GD"; */
+"2Ww-dV-8GD.text" = "Furry Modus";
+
+/* Class = "UILabel"; text = "Lowercase"; ObjectID = "45T-sm-DZs"; */
+"45T-sm-DZs.text" = "kleinbuchstaben modus";
+
+/* Class = "UILabel"; text = "Final excuse"; ObjectID = "SKy-5V-f76"; */
+"SKy-5V-f76.text" = "Generierte Entschuldigung";
+
+/* Class = "UILabel"; text = "Excuse Maker"; ObjectID = "UBq-sk-rdo"; */
+"UBq-sk-rdo.text" = "Entschuldigungsgenerator";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "dah-Qq-bEJ"; */
+"dah-Qq-bEJ.text" = "Einstellungen";
+
+/* Class = "UIButton"; normalTitle = "Show Github"; ObjectID = "fVY-CC-V33"; */
+"fVY-CC-V33.normalTitle" = "Github anzeigen";
+
+/* Class = "UIButton"; normalTitle = "Copy to clipboard"; ObjectID = "hQR-Ql-2Fq"; */
+"hQR-Ql-2Fq.normalTitle" = "In Zwischenablage kopieren";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "n4t-8S-RoA"; */
+"n4t-8S-RoA.title" = "Einstellungen";
+
+/* Class = "UIButton"; normalTitle = "Generate an excuse"; ObjectID = "rnk-Qq-2NQ"; */
+"rnk-Qq-2NQ.normalTitle" = "Generiere eine Entschuldigung";
+
+/* Class = "UITabBarItem"; title = "Main"; ObjectID = "sON-r4-7bY"; */
+"sON-r4-7bY.title" = "Hauptbildschirm";
+
+/* Class = "UILabel"; text = "will go here!"; ObjectID = "su1-UK-qCq"; */
+"su1-UK-qCq.text" = "wird hier erscheinen!";
+
+"WGR-0E-of4.text" = "SCHREI-MODUS";

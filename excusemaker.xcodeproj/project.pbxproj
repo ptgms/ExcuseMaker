@@ -14,6 +14,8 @@
 		5290FE11244F70450059DB27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5290FE0F244F70450059DB27 /* LaunchScreen.storyboard */; };
 		5290FE1C244F70450059DB27 /* excusemakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5290FE1B244F70450059DB27 /* excusemakerTests.swift */; };
 		5290FE27244F70460059DB27 /* excusemakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5290FE26244F70460059DB27 /* excusemakerUITests.swift */; };
+		52FEE01F2450497E000F1CE8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FEE01E2450497E000F1CE8 /* SettingsViewController.swift */; };
+		52FEE02524504DE4000F1CE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52FEE02424504DE4000F1CE8 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,7 @@
 		5290FE03244F70450059DB27 /* excusemaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = excusemaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5290FE06244F70450059DB27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5290FE08244F70450059DB27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
-		5290FE0B244F70450059DB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5290FE0D244F70450059DB27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5290FE10244F70450059DB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5290FE12244F70450059DB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5290FE17244F70450059DB27 /* excusemakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = excusemakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5290FE1B244F70450059DB27 /* excusemakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = excusemakerTests.swift; sourceTree = "<group>"; };
@@ -47,6 +47,12 @@
 		5290FE22244F70460059DB27 /* excusemakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = excusemakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5290FE26244F70460059DB27 /* excusemakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = excusemakerUITests.swift; sourceTree = "<group>"; };
 		5290FE28244F70460059DB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FEE01E2450497E000F1CE8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		52FEE02224504DD2000F1CE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52FEE02324504DD2000F1CE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52FEE02424504DE4000F1CE8 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		52FEE02624504DF0000F1CE8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		52FEE02724504DF0000F1CE8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 				5290FE0D244F70450059DB27 /* Assets.xcassets */,
 				5290FE0F244F70450059DB27 /* LaunchScreen.storyboard */,
 				5290FE12244F70450059DB27 /* Info.plist */,
+				52FEE01E2450497E000F1CE8 /* SettingsViewController.swift */,
+				52FEE02424504DE4000F1CE8 /* Localizable.strings */,
 			);
 			path = excusemaker;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5290FE11244F70450059DB27 /* LaunchScreen.storyboard in Resources */,
+				52FEE02524504DE4000F1CE8 /* Localizable.strings in Resources */,
 				5290FE0E244F70450059DB27 /* Assets.xcassets in Resources */,
 				5290FE0C244F70450059DB27 /* Main.storyboard in Resources */,
 			);
@@ -258,6 +267,7 @@
 			files = (
 				5290FE09244F70450059DB27 /* ViewController.swift in Sources */,
 				5290FE07244F70450059DB27 /* AppDelegate.swift in Sources */,
+				52FEE01F2450497E000F1CE8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +306,8 @@
 		5290FE0A244F70450059DB27 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5290FE0B244F70450059DB27 /* Base */,
+				52FEE02224504DD2000F1CE8 /* Base */,
+				52FEE02624504DF0000F1CE8 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -304,7 +315,8 @@
 		5290FE0F244F70450059DB27 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5290FE10244F70450059DB27 /* Base */,
+				52FEE02324504DD2000F1CE8 /* Base */,
+				52FEE02724504DF0000F1CE8 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -377,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -432,15 +446,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = excusemaker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ptgms.excusemaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,15 +467,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = excusemaker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ptgms.excusemaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
