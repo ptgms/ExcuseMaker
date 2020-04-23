@@ -12,11 +12,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var furrySwitcher: UISwitch!
     @IBOutlet weak var lowerSwitcher: UISwitch!
     @IBOutlet weak var screamModeSwitch: UISwitch!
+    @IBOutlet weak var mockModeSwitch: UISwitch!
     
     var furry = false
     var lower = false
     var scream = false
-    
+    var mock = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +39,11 @@ class SettingsViewController: UIViewController {
             screamModeSwitch.setOn(false, animated: true)
             NotificationCenter.default.post(name: Notification.Name("scream"), object: nil)
         }
+        if (mock==true) {
+            mock = false
+            mockModeSwitch.setOn(false, animated: true)
+            NotificationCenter.default.post(name: Notification.Name("mock"), object: nil)
+        }
         NotificationCenter.default.post(name: Notification.Name("lower"), object: nil)
         if (lower==true) {
             lower = false
@@ -57,6 +63,11 @@ class SettingsViewController: UIViewController {
             lowerSwitcher.setOn(false, animated: true)
             NotificationCenter.default.post(name: Notification.Name("lower"), object: nil)
         }
+        if (mock==true) {
+            mock = false
+            mockModeSwitch.setOn(false, animated: true)
+            NotificationCenter.default.post(name: Notification.Name("mock"), object: nil)
+        }
         NotificationCenter.default.post(name: Notification.Name("scream"), object: nil)
         if (scream==true) {
             scream = false
@@ -64,5 +75,25 @@ class SettingsViewController: UIViewController {
             scream = true
         }
         screamModeSwitch.setOn(scream, animated: true)
+    }
+    
+    @IBAction func mockMode(_ sender: Any) {
+        if (lower==true) {
+            lower = false
+            lowerSwitcher.setOn(false, animated: true)
+            NotificationCenter.default.post(name: Notification.Name("lower"), object: nil)
+        }
+        if (scream==true) {
+            scream = false
+            screamModeSwitch.setOn(false, animated: true)
+            NotificationCenter.default.post(name: Notification.Name("scream"), object: nil)
+        }
+        NotificationCenter.default.post(name: Notification.Name("mock"), object: nil)
+        if (mock==true) {
+            mock = false
+        } else {
+            mock = true
+        }
+        mockModeSwitch.setOn(mock, animated: true)
     }
 }
