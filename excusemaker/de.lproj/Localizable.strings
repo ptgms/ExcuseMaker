@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  excusemaker
+
+  Created by ptgms on 22.04.20.
+  Copyright © 2020 ptgms. All rights reserved.
+*/
+
+"version" = "Version: ";
+"build" = "Build: ";
+"edit" = "Bearbeiten";
+"done" = "Fertig";
+"delete" = "Löschen";
+
+"jojo_easter" = "ich muss einen schwulen Vampir in Ägypten besiegen.";
+"jojo_easter1" = "ich muss [ZA WARUDO] besiegen.";
+
+"place1" = "Generierte Entschuldigung";
+"place2" = "wird hier erscheinen!";
+
+"placehistory" = "Keine Entschuldigungen hier. Generiere ein paar.";
+
+"total" = "Entschuldigungsanzahl: ";

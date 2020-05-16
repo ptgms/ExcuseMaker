@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  excusemaker
+
+  Created by ptgms on 22.04.20.
+  Copyright © 2020 ptgms. All rights reserved.
+*/
+
+"version" = "Version: ";
+"build" = "Build: ";
+"edit" = "Edit";
+"done" = "Done";
+"delete" = "Delete";
+
+"jojo_easter" = "I have to defeat a gay vampire in egypt";
+"jojo_easter1" = "I have to defeat [ZA WARUDO]";
+
+"place1" = "Final excuse";
+"place2" = "will go here!";
+
+"placehistory" = "No excuses here. Try generating some.";
+
+"total" = "Total excuses: ";

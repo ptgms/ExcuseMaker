@@ -15,11 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var exc2: UILabel!
     @IBOutlet weak var clipButton: UIButton!
     
-    
-    var lower = false
-    var furry = false
-    var scream = false
-    var mock = false
+    let defaults = UserDefaults.standard
     
     let excuse1 = ["Sorry, I can't come today, since", "Sorry, I can't be there, because", "I think I'm in trouble here, since", "Ah damn, I can't do that because", "I can't come,", "I know I'm kinda late with this, I can't come since", "Ahh crap, I can't come,", "Idk if I can come since", "Fucking hell,"]
     let excuse2 = ["I forgot I have to turn in a paper today", "I gotta bring the dog to the vet", "I have to watch a movie today", "someone from the family needs urgent help right now", "I got an suprise visit here", "I have an project whose deadline is today", "I got an call from my boss", "I have to help at home", "I'm busy working on my project", "someone invited me to the cinema right now"]
@@ -31,43 +27,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(furryOnOff), name: Notification.Name("furry"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(lowerOnOff), name: Notification.Name("lower"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(screamOnOff), name: Notification.Name("scream"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(mockOnOff), name: Notification.Name("mock"), object: nil)
-    }
-    
-    @objc func furryOnOff() {
-        if (furry==true) {
-            furry = false
-        } else {
-            furry = true
-        }
+        GlobalVar.history = defaults.stringArray(forKey: "history") ?? [String]()
+        exc1.text = defaults.string(forKey: "excuse1") ?? "place1".localized
+        exc2.text = defaults.string(forKey: "excuse2") ?? "place2".localized
         
-    }
-    
-    @objc func lowerOnOff() {
-        if (lower==true) {
-            lower = false
-        } else {
-            lower = true
-        }
-    }
-    
-    @objc func screamOnOff() {
-        if (scream==true) {
-            scream = false
-        } else {
-            scream = true
-        }
-    }
-    
-    @objc func mockOnOff() {
-        if (mock==true) {
-            mock = false
-        } else {
-            mock = true
-        }
+        GlobalVar.mock = defaults.bool(forKey: "mock")
+        GlobalVar.furry = defaults.bool(forKey: "furry")
+        GlobalVar.lower = defaults.bool(forKey: "lower")
+        GlobalVar.scream = defaults.bool(forKey: "scream")
     }
     
     @IBAction func copyClipboardPressed(_ sender: Any) {
@@ -85,7 +52,8 @@ class ViewController: UIViewController {
             exc1.text = excuse1[Int.random(in: 0 ..< excuse1.count)]
             exc2.text = excuse2[Int.random(in: 0 ..< excuse2.count)]
         }
-        if (furry==true) {
+        
+        if (GlobalVar.furry==true) {
             exc1.text = exc1.text!.replacingOccurrences(of: "l", with: "w")
             exc1.text = exc1.text!.replacingOccurrences(of: "L", with: "W")
             exc1.text = exc1.text!.replacingOccurrences(of: "r", with: "w")
@@ -105,15 +73,15 @@ class ViewController: UIViewController {
             }
             
         }
-        if (lower==true) {
+        if (GlobalVar.lower==true) {
             exc1.text = exc1.text?.lowercased()
             exc2.text = exc2.text?.lowercased()
         }
-        if (scream==true) {
+        if (GlobalVar.scream==true) {
             exc1.text = exc1.text?.uppercased()
             exc2.text = exc2.text?.uppercased()
         }
-        if (mock==true) {
+        if (GlobalVar.mock==true) {
             var final1 = ""
             var final2 = ""
             var prog = true
@@ -136,6 +104,33 @@ class ViewController: UIViewController {
             }
             exc2.text = final2
         }
+        let easteregg = Int.random(in: 0 ..< 10000)
+        switch easteregg {
+        case 1:
+            exc2.text = "jojo_easter1".localized
+        case 2:
+            exc2.text = "jojo_easter".localized
+        default:
+            break
+        }
+        GlobalVar.history.insert(exc1.text! + " " + exc2.text!, at: 0)
+        if (GlobalVar.history.count == 200) {
+            GlobalVar.history.remove(at: 199)
+        }
+        autosave()
+    }
+    
+    func autosave() {
+        defaults.set(GlobalVar.history, forKey: "history")
+        defaults.set(exc1.text, forKey: "excuse1")
+        defaults.set(exc2.text, forKey: "excuse2")
     }
 }
 
+struct GlobalVar {
+    static var history = [String]()
+    static var scream = false
+    static var mock = false
+    static var furry = false
+    static var lower = false
+}
